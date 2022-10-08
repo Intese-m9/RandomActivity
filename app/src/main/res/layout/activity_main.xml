@@ -37,7 +37,7 @@
                     android:layout_height="50dp"
                     android:layout_marginEnd="8dp"
                     android:contentDescription="Card Logo"
-                    app:srcCompat="@drawable/ic_components_24px" />
+                    app:srcCompat="@drawable/ic_components" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -50,7 +50,7 @@
                         style="?attr/textAppearanceHeadline6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Title goes here" />
+                        android:text="Let's go my dear friend" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -58,27 +58,26 @@
                         android:layout_marginTop="8dp"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="Secondary message card layouts can vary to support the types of content they contain. The following elements are commonly found among that variety." />
+                        android:text="Select an item and get an answer. Good luck!" />
                 </LinearLayout>
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/glideimage"
                 android:layout_width="match_parent"
                 android:layout_height="194dp"
                 android:background="@android:color/transparent"
                 android:contentDescription="Card Image"
                 android:scaleType="centerCrop"
-                app:backgroundTint="@color/material_on_surface_emphasis_medium"
-                app:backgroundTintMode="add"
-                app:srcCompat="@drawable/sample2" />
+                app:backgroundTintMode="add" />
 
             <TextView
+                android:id="@+id/textviewActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:maxLines="2"
-                android:text="Lorem ipsum dolor sit amet, nec no nominavi scaevola. Per et sint sapientem, nobis perpetua salutandi mei te. Quo tamquam probatus reprehendunt in. Eos esse purto eruditi ea. Enim tation persius ut sea, eos ad consul populo.
-Ne eum solet altera. Cibo eligendi et est, electram theophrastus te vel eu." />
+                android:text="Bla bla bla! I am a junior+ developer. My name Ivan! Nice to meet you" />
 
 
             <LinearLayout
@@ -88,18 +87,20 @@ Ne eum solet altera. Cibo eligendi et est, electram theophrastus te vel eu." />
                 android:padding="8dp">
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/recreationalbutton"
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="Action 1" />
+                    android:text="Развлечения" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/educationbutton"
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="Action 2" />
+                    android:text="Обучение" />
 
             </LinearLayout>
 
