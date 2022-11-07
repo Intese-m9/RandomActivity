@@ -1,4 +1,4 @@
-package com.example.jsondata
+package com.example.data.jsondata
 
 //JsonObject
 data class Main(

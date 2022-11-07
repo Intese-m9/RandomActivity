@@ -1,6 +1,6 @@
-package com.example.retrofit
+package com.example.domain.repository
 
-import com.example.jsondata.Main
+import com.example.data.jsondata.Main
 import retrofit2.Response
 import retrofit2.http.GET
 

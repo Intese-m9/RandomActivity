@@ -1,10 +1,12 @@
-package com.example.randomactivity
+package com.example.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
-import com.example.retrofit.RandomApi
-import com.example.retrofit.RetrofitHelper
+import com.example.randomactivity.R
+import com.example.domain.repository.RandomApi
+import com.example.domain.retrofit.RetrofitHelper
+import com.example.usecase.GetRandomData
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -20,17 +22,14 @@ class MainActivity : AppCompatActivity() {
         recreationalbutton?.setOnClickListener {
             //use coroutines "GlobalScope"
             GlobalScope.launch(Dispatchers.Main) {
-                val randomApi = RetrofitHelper.getInstance().create(RandomApi::class.java)
-                val resultRecreation = randomApi.getRecreational()
-                textviewActivity?.text = resultRecreation.body()?.activity
+                textviewActivity?.text = GetRandomData().Recreational()
             }
         }
         educationbutton?.setOnClickListener {
             //use coroutines "GlobalScope"
             GlobalScope.launch(Dispatchers.Main) {
-                val randomApi = RetrofitHelper.getInstance().create(RandomApi::class.java)
-                val resultRecreation = randomApi.getEducation()
-                textviewActivity?.text = resultRecreation.body()?.activity
+
+                textviewActivity?.text = GetRandomData().Education()
             }
         }
     }
